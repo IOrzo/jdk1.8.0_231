@@ -641,6 +641,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
                     if ((e = p.next) == null) {
                         p.next = newNode(hash, key, value, null);
                         if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
+                            // 将冲突的存储结构转为红黑树
                             treeifyBin(tab, hash);
                         break;
                     }
