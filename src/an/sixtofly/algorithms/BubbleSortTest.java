@@ -1,4 +1,4 @@
-package an.sixtofly;
+package an.sixtofly.algorithms;
 
 /**
  * 冒泡排序, 比较两个相邻数据, 大的在后面

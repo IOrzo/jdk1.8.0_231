@@ -1,4 +1,6 @@
-package an.sixtofly;
+package an.sixtofly.algorithms;
+
+import an.sixtofly.algorithms.AlgorithmsTest;
 
 /**
  * 插入排序, 与前面已排序数做比较

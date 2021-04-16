@@ -1,4 +1,4 @@
-package an.sixtofly;
+package an.sixtofly.algorithms;
 
 import java.util.Random;
 
