@@ -2,6 +2,12 @@ package an.sixtofly.algorithms;
 
 /**
  * 冒泡排序, 比较两个相邻数据, 大的在后面
+ * 平均时间复杂度：O(N^2)
+ * 最佳时间复杂度：O(N)
+ * 最差时间复杂度：O(N^2)
+ * 空间复杂度：O(1)
+ * 稳定性：稳定
+ *
  * @author xie yuan bing
  * @date 2021-04-14 16:56
  */

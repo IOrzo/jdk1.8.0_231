@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * 二分查找
  * @author xie yuan bing
  * @date 2021-04-12 16:05
  */

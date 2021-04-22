@@ -1,22 +1,17 @@
 package an.sixtofly.algorithms;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public abstract class AlgorithmsTest {
 
 
     public static int[] random() {
-        Random random = new Random(System.currentTimeMillis());
+        SecureRandom random = new SecureRandom();
         int[] data = new int[15];
-        System.out.print("[");
         for (int i = 0; i < data.length; i++) {
             data[i] = random.nextInt(100);
-            System.out.print(data[i]);
-            if (i != data.length - 1) {
-                System.out.print(",");
-            }
         }
-        System.out.println("]");
+        print(data);
         return data;
     }
 

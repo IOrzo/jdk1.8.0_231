@@ -1,10 +1,13 @@
 package an.sixtofly.algorithms;
 
-import an.sixtofly.algorithms.AlgorithmsTest;
-
 /**
  * 插入排序, 与前面已排序数做比较
  * 所有元素后移, 若当前数大于前面数, 则插入
+ *
+ * 平均时间复杂度：O(N^2)
+ * 最差时间复杂度：O(N^2)
+ * 空间复杂度：O(1)
+ * 稳定性：稳定
  *
  * @author xie yuan bing
  * @date 2021-04-14 17:21
