@@ -233,7 +233,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
     /**
      * The default initial capacity - MUST be a power of two.
      */
-    static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
+    static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka(又名) 16
 
     /**
      * The maximum capacity, used if a higher value is implicitly specified
@@ -248,7 +248,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
     static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     /**
-     * The bin count threshold for using a tree rather than list for a
+     * The bin count threshold(临界点) for using a tree rather than list for a
      * bin.  Bins are converted to trees when adding an element to a
      * bin with at least this many nodes. The value must be greater
      * than 2 and should be at least 8 to mesh with assumptions in
@@ -598,7 +598,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 
     /**
      * Associates the specified value with the specified key in this map.
-     * If the map previously contained a mapping for the key, the old
+     * If the map previously contained(包含) a mapping for the key, the old
      * value is replaced.
      *
      * @param key key with which the specified value is to be associated
@@ -640,6 +640,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
                 for (int binCount = 0; ; ++binCount) {
                     if ((e = p.next) == null) {
                         p.next = newNode(hash, key, value, null);
+                        // 加上新增的一个结点, 此时结点数量为9, 大于8, 此时的 binCount = 7
                         if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
                             // 将冲突的存储结构转为红黑树
                             treeifyBin(tab, hash);
@@ -713,7 +714,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
                         newTab[e.hash & (newCap - 1)] = e;
                     else if (e instanceof TreeNode)
                         ((TreeNode<K,V>)e).split(this, newTab, j, oldCap);
-                    else { // preserve order
+                    else { // preserve(保存) order
                         Node<K,V> loHead = null, loTail = null;
                         Node<K,V> hiHead = null, hiTail = null;
                         Node<K,V> next;
@@ -755,6 +756,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
      */
     final void treeifyBin(Node<K,V>[] tab, int hash) {
         int n, index; Node<K,V> e;
+        // 数组容量小于64则进行 resize(), 不执行转化为树结构
         if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
             resize();
         else if ((e = tab[index = (n - 1) & hash]) != null) {
@@ -2164,6 +2166,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
             }
 
             if (loHead != null) {
+                // 结点数量小于等于6时退化为链表
                 if (lc <= UNTREEIFY_THRESHOLD)
                     tab[index] = loHead.untreeify(map);
                 else {

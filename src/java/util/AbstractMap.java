@@ -27,8 +27,8 @@ package java.util;
 import java.util.Map.Entry;
 
 /**
- * This class provides a skeletal implementation of the <tt>Map</tt>
- * interface, to minimize the effort required to implement this interface.
+ * This class provides a skeletal(骨骼的) implementation of the <tt>Map</tt>
+ * interface, to minimize the effort(努力) required to implement this interface.
  *
  * <p>To implement an unmodifiable map, the programmer needs only to extend this
  * class and provide an implementation for the <tt>entrySet</tt> method, which
@@ -49,7 +49,7 @@ import java.util.Map.Entry;
  *
  * <p>The documentation for each non-abstract method in this class describes its
  * implementation in detail.  Each of these methods may be overridden if the
- * map being implemented admits a more efficient implementation.
+ * map being implemented admits(承认) a more efficient(高效的) implementation.
  *
  * <p>This class is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
@@ -595,9 +595,9 @@ public abstract class AbstractMap<K,V> implements Map<K,V> {
 
 
     /**
-     * An Entry maintaining a key and a value.  The value may be
+     * An Entry maintaining(维持) a key and a value.  The value may be
      * changed using the <tt>setValue</tt> method.  This class
-     * facilitates the process of building custom map
+     * facilitates(促进) the process of building custom map
      * implementations. For example, it may be convenient to return
      * arrays of <tt>SimpleEntry</tt> instances in method
      * <tt>Map.entrySet().toArray</tt>.
