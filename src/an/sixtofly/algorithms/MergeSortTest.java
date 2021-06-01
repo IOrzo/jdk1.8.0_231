@@ -47,6 +47,7 @@ public class MergeSortTest {
 
             // 分右边
             first(data, mid + 1, right, temp);
+
             // 合并
             int li = left;
             int ri = mid + 1;

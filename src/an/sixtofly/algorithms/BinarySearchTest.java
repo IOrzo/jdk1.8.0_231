@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * 二分查找
+ * 平均时间复杂度：O(log2n)
  * @author xie yuan bing
  * @date 2021-04-12 16:05
  */
