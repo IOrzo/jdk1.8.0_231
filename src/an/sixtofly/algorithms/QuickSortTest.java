@@ -11,6 +11,7 @@ package an.sixtofly.algorithms;
  * 最佳时间复杂度：O(NlogN)
  * 最差时间复杂度：O(N^2)
  * 空间复杂度：根据实现方式的不同而不同
+ * 稳定性: 不稳定
  *
  * @author xie yuan bing
  * @date 2021-04-16 09:33
