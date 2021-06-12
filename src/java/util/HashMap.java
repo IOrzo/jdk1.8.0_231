@@ -640,10 +640,8 @@ public class HashMap<K,V> extends AbstractMap<K,V>
                 for (int binCount = 0; ; ++binCount) {
                     if ((e = p.next) == null) {
                         p.next = newNode(hash, key, value, null);
-                        // 加上新增的一个结点, 此时结点数量为9, 大于8, 此时的 binCount = 7
-                        if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
-                            // 将冲突的存储结构转为红黑树
-                            treeifyBin(tab, hash);
+                        if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st  加上新增的一个结点, 此时结点数量为9, 大于8, 此时的 binCount = 7
+                            treeifyBin(tab, hash); // 将冲突的存储结构转为红黑树
                         break;
                     }
                     if (e.hash == hash &&
@@ -688,9 +686,9 @@ public class HashMap<K,V> extends AbstractMap<K,V>
             }
             else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
                      oldCap >= DEFAULT_INITIAL_CAPACITY)
-                newThr = oldThr << 1; // double threshold
+                 newThr = oldThr << 1; // double threshold
         }
-        else if (oldThr > 0) // initial capacity was placed in threshold
+        else if (oldThr > 0) // initial capacity was placed in threshold 第一次时候，使用 threshold 赋值初始值
             newCap = oldThr;
         else {               // zero initial threshold signifies using defaults
             newCap = DEFAULT_INITIAL_CAPACITY;
@@ -756,8 +754,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
      */
     final void treeifyBin(Node<K,V>[] tab, int hash) {
         int n, index; Node<K,V> e;
-        // 数组容量小于64则进行 resize(), 不执行转化为树结构
-        if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
+        if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY) // 数组容量小于64则进行 resize(), 不执行转化为树结构
             resize();
         else if ((e = tab[index = (n - 1) & hash]) != null) {
             TreeNode<K,V> hd = null, tl = null;
@@ -2166,8 +2163,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
             }
 
             if (loHead != null) {
-                // 结点数量小于等于6时退化为链表
-                if (lc <= UNTREEIFY_THRESHOLD)
+                if (lc <= UNTREEIFY_THRESHOLD) // 结点数量小于等于6时退化为链表
                     tab[index] = loHead.untreeify(map);
                 else {
                     tab[index] = loHead;
