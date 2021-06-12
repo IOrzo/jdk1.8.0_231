@@ -518,7 +518,7 @@ public class ReentrantLock implements Lock, java.io.Serializable {
      *   public void m() {
      *     assert lock.getHoldCount() == 0;
      *     lock.lock();
-     *     try {
+     *     try {d
      *       // ... method body
      *     } finally {
      *       lock.unlock();

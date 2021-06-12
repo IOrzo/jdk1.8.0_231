@@ -45,7 +45,7 @@ import sun.misc.Unsafe;
  * synchronizers (semaphores, events, etc) that rely on
  * first-in-first-out (FIFO) wait queues.  This class is designed to
  * be a useful basis for most kinds of synchronizers that rely on a
- * single atomic {@code int} value to represent state. Subclasses
+ * single atomic {@code int} value to represent(代表) state. Subclasses
  * must define the protected methods that change this state, and which
  * define what that state means in terms of this object being acquired
  * or released.  Given these, the other methods in this class carry
@@ -61,7 +61,7 @@ import sun.misc.Unsafe;
  * {@code AbstractQueuedSynchronizer} does not implement any
  * synchronization interface.  Instead it defines methods such as
  * {@link #acquireInterruptibly} that can be invoked as
- * appropriate by concrete locks and related synchronizers to
+ * appropriate(合适的) by concrete locks and related synchronizers to
  * implement their public methods.
  *
  * <p>This class supports either or both a default <em>exclusive</em>
@@ -303,7 +303,7 @@ public abstract class AbstractQueuedSynchronizer
      *
      * <p>The wait queue is a variant of a "CLH" (Craig, Landin, and
      * Hagersten) lock queue. CLH locks are normally used for
-     * spinlocks.  We instead use them for blocking synchronizers, but
+     * spinlocks(自旋锁).  We instead use them for blocking synchronizers, but
      * use the same basic tactic of holding some of the control
      * information about a thread in the predecessor of its node.  A
      * "status" field in each node keeps track of whether a thread
@@ -391,7 +391,7 @@ public abstract class AbstractQueuedSynchronizer
         static final int CONDITION = -2;
         /**
          * waitStatus value to indicate the next acquireShared should
-         * unconditionally propagate
+         * unconditionally propagate(传播)
          */
         static final int PROPAGATE = -3;
 
@@ -401,7 +401,7 @@ public abstract class AbstractQueuedSynchronizer
          *               blocked (via park), so the current node must
          *               unpark its successor when it releases or
          *               cancels. To avoid races, acquire methods must
-         *               first indicate they need a signal,
+         *               first indicate they need a signal(为了避免竞争，获取方法必须首先表明它们需要一个信号),
          *               then retry the atomic acquire, and then,
          *               on failure, block.
          *   CANCELLED:  This node is cancelled due to timeout or interrupt.
@@ -647,8 +647,8 @@ public abstract class AbstractQueuedSynchronizer
 
         /*
          * Thread to unpark is held in successor, which is normally
-         * just the next node.  But if cancelled or apparently null,
-         * traverse backwards from tail to find the actual
+         * just the next node.  But if cancelled or apparently(显然) null,
+         * traverse(遍历) backwards from tail to find the actual
          * non-cancelled successor.
          */
         Node s = node.next;
@@ -813,7 +813,7 @@ public abstract class AbstractQueuedSynchronizer
             /*
              * waitStatus must be 0 or PROPAGATE.  Indicate that we
              * need a signal, but don't park yet.  Caller will need to
-             * retry to make sure it cannot acquire before parking.
+             * retry to make sure it cannot acquire before parking. 调用者需要在调用parking之前再次确认不能获取signal
              */
             compareAndSetWaitStatus(pred, ws, Node.SIGNAL);
         }
@@ -1197,6 +1197,7 @@ public abstract class AbstractQueuedSynchronizer
     public final void acquire(int arg) {
         if (!tryAcquire(arg) &&
             acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
+            // 中断当前线程
             selfInterrupt();
     }
 
@@ -1260,6 +1261,7 @@ public abstract class AbstractQueuedSynchronizer
     public final boolean release(int arg) {
         if (tryRelease(arg)) {
             Node h = head;
+            // h.waitStatus != 0 说明头结点后面有结点，因为有结点的话，会把前驱结点状态修改为-1
             if (h != null && h.waitStatus != 0)
                 unparkSuccessor(h);
             return true;
@@ -1274,7 +1276,7 @@ public abstract class AbstractQueuedSynchronizer
      * repeatedly blocking and unblocking, invoking {@link
      * #tryAcquireShared} until success.
      *
-     * @param arg the acquire argument.  This value is conveyed to
+     * @param arg the acquire argument.  This value is conveyed(传达) to
      *        {@link #tryAcquireShared} but is otherwise uninterpreted
      *        and can represent anything you like.
      */

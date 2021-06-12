@@ -48,7 +48,7 @@ import sun.misc.Unsafe;
  * available, if it was not already available. (Unlike with Semaphores
  * though, permits do not accumulate. There is at most one.)
  *
- * <p>Methods {@code park} and {@code unpark} provide efficient
+ * <p>Methods {@code park} and {@code unpark} provide efficient(高效的)
  * means of blocking and unblocking threads that do not encounter the
  * problems that cause the deprecated methods {@code Thread.suspend}
  * and {@code Thread.resume} to be unusable for such purposes: Races
