@@ -184,7 +184,7 @@ class ComparableTimSort {
             return;  // Arrays of size 0 and 1 are always sorted
 
         // If array is small, do a "mini-TimSort" with no merges
-        if (nRemaining < MIN_MERGE) {
+        if (nRemaining < MIN_MERGE) { // 小于 32
             int initRunLen = countRunAndMakeAscending(a, lo, hi);
             binarySort(a, lo, hi, lo + initRunLen);
             return;

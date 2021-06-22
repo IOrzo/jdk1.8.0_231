@@ -411,9 +411,7 @@ public class ArrayList<E> extends AbstractList<E>
             return (T[]) Arrays.copyOf(elementData, size, a.getClass());
         System.arraycopy(elementData, 0, a, 0, size);
         if (a.length > size)
-            // 这操作很不理解, 经查资料, 倾向于认为相当于结束符
-            // 或者由文档描述, 调用者应当知道列表是否包含有 null 元素
-            a[size] = null;
+            a[size] = null; // 这操作很不理解, 经查资料, 倾向于认为相当于结束符。或者由文档描述, 调用者应当知道列表是否包含有 null 元素
         return a;
     }
 
