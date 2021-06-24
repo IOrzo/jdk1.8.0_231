@@ -19,7 +19,7 @@ public class ThreadPoolExecutorTest {
      */
     public static void testExecTask() {
         BlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(10);
-        ExecutorService executorService = new ThreadPoolExecutor(2, 5, 1, TimeUnit.MINUTES, queue, new NameThreadFactory("number"));
+        ExecutorService executorService = new ThreadPoolExecutor(2, 5, 1, TimeUnit.MINUTES, queue, new NamedThreadFactory("number-", true));
         for (int i = 0; i < 15; i++) {
             executorService.execute(() -> {
                 System.out.println(Thread.currentThread().getName());
