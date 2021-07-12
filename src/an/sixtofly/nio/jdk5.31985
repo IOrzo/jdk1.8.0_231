@@ -1,0 +1,795 @@
+execve("/usr/local/software/jdk5/bin/java", ["/usr/local/software/jdk5/bin/jav"..., "ServerSocketTest"], 0x7ffe452c8650 /* 24 vars */) = 0
+brk(NULL)                               = 0x4141b000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f03e26e4000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=20200, ...}) = 0
+mmap(NULL, 20200, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f03e26df000
+close(3)                                = 0
+open("/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200m\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=142144, ...}) = 0
+mmap(NULL, 2208904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f03e22a8000
+mprotect(0x7f03e22bf000, 2093056, PROT_NONE) = 0
+mmap(0x7f03e24be000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7f03e24be000
+mmap(0x7f03e24c0000, 13448, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f03e24c0000
+close(3)                                = 0
+open("/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\16\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=19248, ...}) = 0
+mmap(NULL, 2109744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f03e20a4000
+mprotect(0x7f03e20a6000, 2097152, PROT_NONE) = 0
+mmap(0x7f03e22a6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f03e22a6000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`&\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2156240, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f03e26de000
+mmap(NULL, 3985920, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f03e1cd6000
+mprotect(0x7f03e1e99000, 2097152, PROT_NONE) = 0
+mmap(0x7f03e2099000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c3000) = 0x7f03e2099000
+mmap(0x7f03e209f000, 16896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f03e209f000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f03e26dc000
+arch_prctl(ARCH_SET_FS, 0x7f03e26dc740) = 0
+mprotect(0x7f03e2099000, 16384, PROT_READ) = 0
+mprotect(0x7f03e22a6000, 4096, PROT_READ) = 0
+mprotect(0x7f03e24be000, 4096, PROT_READ) = 0
+mprotect(0x7f03e26e5000, 4096, PROT_READ) = 0
+munmap(0x7f03e26df000, 20200)           = 0
+set_tid_address(0x7f03e26dca10)         = 31985
+set_robust_list(0x7f03e26dca20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f03e22ae860, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f03e22b7630}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f03e22ae8f0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f03e22b7630}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x4141b000
+brk(0x4143c000)                         = 0x4143c000
+brk(NULL)                               = 0x4143c000
+readlink("/proc/self/exe", "/usr/local/software/jdk5/bin/jav"..., 4096) = 33
+access("/usr/local/software/jdk5/lib/amd64/libjava.so", F_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/software/jdk5/jre/lib/amd64/libjava.so", F_OK) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/jvm.cfg", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=652, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f03e26e3000
+read(3, "#\n# @(#)jvm.cfg\t1.2 03/11/03\n# \n"..., 4096) = 652
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f03e26e3000, 4096)            = 0
+stat("/usr/local/software/jdk5/jre/lib/amd64/server/libjvm.so", {st_mode=S_IFREG|0755, st_size=10194189, ...}) = 0
+getgid()                                = 0
+getegid()                               = 0
+getuid()                                = 0
+geteuid()                               = 0
+execve("/usr/local/software/jdk5/bin/java", ["/usr/local/software/jdk5/bin/jav"..., "ServerSocketTest"], 0x4141b1a0 /* 25 vars */) = 0
+brk(NULL)                               = 0x4136e000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fd000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/server/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/server/tls/x86_64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/server/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/server/tls", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/server/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/server/x86_64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/server", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/tls/x86_64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/tls", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64/x86_64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/amd64", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/software/jdk5/jre/../lib/amd64/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/../lib/amd64/tls/x86_64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/../lib/amd64/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/../lib/amd64/tls", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/../lib/amd64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/../lib/amd64/x86_64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/../lib/amd64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/../lib/amd64", 0x7ffca6870340) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=20200, ...}) = 0
+mmap(NULL, 20200, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fcf7e5f8000
+close(3)                                = 0
+open("/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200m\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=142144, ...}) = 0
+mmap(NULL, 2208904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7e1c1000
+mprotect(0x7fcf7e1d8000, 2093056, PROT_NONE) = 0
+mmap(0x7fcf7e3d7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7fcf7e3d7000
+mmap(0x7fcf7e3d9000, 13448, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e3d9000
+close(3)                                = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\16\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=19248, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5f7000
+mmap(NULL, 2109744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7dfbd000
+mprotect(0x7fcf7dfbf000, 2097152, PROT_NONE) = 0
+mmap(0x7fcf7e1bf000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fcf7e1bf000
+close(3)                                = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`&\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2156240, ...}) = 0
+mmap(NULL, 3985920, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7dbef000
+mprotect(0x7fcf7ddb2000, 2097152, PROT_NONE) = 0
+mmap(0x7fcf7dfb2000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c3000) = 0x7fcf7dfb2000
+mmap(0x7fcf7dfb8000, 16896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7dfb8000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5f6000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5f4000
+arch_prctl(ARCH_SET_FS, 0x7fcf7e5f4740) = 0
+mprotect(0x7fcf7dfb2000, 16384, PROT_READ) = 0
+mprotect(0x7fcf7e1bf000, 4096, PROT_READ) = 0
+mprotect(0x7fcf7e3d7000, 4096, PROT_READ) = 0
+mprotect(0x7fcf7e5fe000, 4096, PROT_READ) = 0
+munmap(0x7fcf7e5f8000, 20200)           = 0
+set_tid_address(0x7fcf7e5f4a10)         = 31985
+set_robust_list(0x7fcf7e5f4a20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7fcf7e1c7860, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fcf7e1c78f0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x4136e000
+brk(0x4138f000)                         = 0x4138f000
+brk(NULL)                               = 0x4138f000
+readlink("/proc/self/exe", "/usr/local/software/jdk5/bin/jav"..., 4096) = 33
+access("/usr/local/software/jdk5/lib/amd64/libjava.so", F_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/software/jdk5/jre/lib/amd64/libjava.so", F_OK) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/jvm.cfg", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=652, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fc000
+read(3, "#\n# @(#)jvm.cfg\t1.2 03/11/03\n# \n"..., 4096) = 652
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7fcf7e5fc000, 4096)            = 0
+stat("/usr/local/software/jdk5/jre/lib/amd64/server/libjvm.so", {st_mode=S_IFREG|0755, st_size=10194189, ...}) = 0
+getgid()                                = 0
+getegid()                               = 0
+getuid()                                = 0
+geteuid()                               = 0
+futex(0x7fcf7e1c00d0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libjvm.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\215\34\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=10194189, ...}) = 0
+mmap(NULL, 9991792, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7d267000
+mprotect(0x7fcf7d944000, 1044480, PROT_NONE) = 0
+mmap(0x7fcf7da43000, 1560576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6dc000) = 0x7fcf7da43000
+mmap(0x7fcf7dbc0000, 190064, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7dbc0000
+close(3)                                = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=20200, ...}) = 0
+mmap(NULL, 20200, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fcf7e5f8000
+close(3)                                = 0
+open("/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0PS\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1136944, ...}) = 0
+mmap(NULL, 3150136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7cf65000
+mprotect(0x7fcf7d066000, 2093056, PROT_NONE) = 0
+mmap(0x7fcf7d265000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x100000) = 0x7fcf7d265000
+close(3)                                = 0
+mprotect(0x7fcf7d265000, 4096, PROT_READ) = 0
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffca686f4a0) = -1 ENOENT (No such file or directory)
+munmap(0x7fcf7e5f8000, 20200)           = 0
+openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+getdents(3, /* 16 entries */, 32768)    = 488
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+open("/proc/meminfo", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fc000
+read(3, "MemTotal:        1798696 kB\nMemF"..., 1024) = 1024
+close(3)                                = 0
+munmap(0x7fcf7e5fc000, 4096)            = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/amd64", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/amd64/server", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/amd64/server/libjvm.so", {st_mode=S_IFREG|0755, st_size=10194189, ...}) = 0
+open(".hotspotrc", O_RDONLY)            = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/software/jdk5/jre/lib/endorsed", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 ENOENT (No such file or directory)
+open("/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+read(3, "0\n", 8192)                    = 2
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fc000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fb000
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigaction(SIGUSR2, {sa_handler=0x7fcf7d7d7710, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, NULL, 8) = 0
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x7fcf7d7d5860, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=0x7fcf7d7d5860, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x7fcf7d7d5860, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, {sa_handler=0x7fcf7d7d5860, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, {sa_handler=0x7fcf7d7d5860, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+open("/proc/self/maps", O_RDONLY)       = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fa000
+read(3, "40000000-4000e000 r-xp 00000000 "..., 1024) = 1024
+read(3, "software/jdk5/jre/lib/amd64/serv"..., 1024) = 1024
+read(3, "o\n7fcf7e1d8000-7fcf7e3d7000 ---p"..., 1024) = 1024
+close(3)                                = 0
+munmap(0x7fcf7e5fa000, 4096)            = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=65535, rlim_max=65535}) = 0
+setrlimit(RLIMIT_NOFILE, {rlim_cur=65535, rlim_max=65535}) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/native_threads/libhpi.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\3603\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=44184, ...}) = 0
+mmap(NULL, 1092216, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7e4e9000
+mprotect(0x7fcf7e4f0000, 1052672, PROT_NONE) = 0
+mmap(0x7fcf7e5f1000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000) = 0x7fcf7e5f1000
+close(3)                                = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libnsl.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/libnsl.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=20200, ...}) = 0
+mmap(NULL, 20200, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fcf7e4e4000
+close(3)                                = 0
+open("/lib64/libnsl.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200@\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=115816, ...}) = 0
+mmap(NULL, 2202296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7cd4b000
+mprotect(0x7fcf7cd62000, 2093056, PROT_NONE) = 0
+mmap(0x7fcf7cf61000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7fcf7cf61000
+mmap(0x7fcf7cf63000, 6840, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7cf63000
+close(3)                                = 0
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffca686e220) = -1 ENOENT (No such file or directory)
+mprotect(0x7fcf7cf61000, 4096, PROT_READ) = 0
+munmap(0x7fcf7e4e4000, 20200)           = 0
+geteuid()                               = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1949, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fa000
+read(3, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1949
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7fcf7e5fa000, 4096)            = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/server/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/software/jdk5/jre/lib/amd64/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=20200, ...}) = 0
+mmap(NULL, 20200, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fcf7e4e4000
+close(3)                                = 0
+open("/lib64/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=61560, ...}) = 0
+mmap(NULL, 2173048, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7cb38000
+mprotect(0x7fcf7cb44000, 2093056, PROT_NONE) = 0
+mmap(0x7fcf7cd43000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7fcf7cd43000
+mmap(0x7fcf7cd45000, 22648, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7cd45000
+close(3)                                = 0
+mprotect(0x7fcf7cd43000, 4096, PROT_READ) = 0
+munmap(0x7fcf7e4e4000, 20200)           = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=920, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fa000
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 920
+close(3)                                = 0
+munmap(0x7fcf7e5fa000, 4096)            = 0
+openat(AT_FDCWD, "/tmp/hsperfdata_root", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+lstat("/tmp/hsperfdata_root", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents(3, /* 3 entries */, 32768)     = 80
+kill(16965, SIG_0)                      = 0
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+mkdir("/tmp/hsperfdata_root", 0755)     = -1 EEXIST (File exists)
+lstat("/tmp/hsperfdata_root", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/tmp/hsperfdata_root/31985", O_RDWR|O_CREAT|O_TRUNC, 0600) = 3
+ftruncate(3, 32768)                     = 0
+mmap(NULL, 32768, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7fcf7e4e1000
+close(3)                                = 0
+gettid()                                = 31985
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+mmap(0x7ffca6673000, 12288, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ffca6673000
+mprotect(0x7ffca6673000, 12288, PROT_NONE) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/libverify.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200D\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=59672, ...}) = 0
+mmap(NULL, 1106264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7ca29000
+mprotect(0x7fcf7ca36000, 1044480, PROT_NONE) = 0
+mmap(0x7fcf7cb35000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7fcf7cb35000
+close(3)                                = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/libjava.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\316\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=175424, ...}) = 0
+mmap(NULL, 1219032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7c8ff000
+mprotect(0x7fcf7c923000, 1048576, PROT_NONE) = 0
+mmap(0x7fcf7ca23000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7fcf7ca23000
+close(3)                                = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/libzip.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240&\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=80664, ...}) = 0
+mmap(NULL, 1127488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf7c7eb000
+mprotect(0x7fcf7c7f9000, 1056768, PROT_NONE) = 0
+mmap(0x7fcf7c8fb000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x7fcf7c8fb000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/rt.jar", {st_mode=S_IFREG|0644, st_size=40232487, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/rt.jar", {st_mode=S_IFREG|0644, st_size=40232487, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/rt.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=40232487, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 40232487
+mmap(NULL, 40232487, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf7a18c000
+close(3)                                = 0
+mmap(NULL, 434176, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e477000
+stat("/usr/local/software/jdk5/jre/lib/i18n.jar", 0x7ffca686f7b0) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/sunrsasign.jar", 0x7ffca686f7b0) = -1 ENOENT (No such file or directory)
+stat("/usr/local/software/jdk5/jre/lib/jsse.jar", {st_mode=S_IFREG|0644, st_size=544209, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/jsse.jar", {st_mode=S_IFREG|0644, st_size=544209, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/jsse.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=544209, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 544209
+mmap(NULL, 544209, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf7a107000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/jce.jar", {st_mode=S_IFREG|0444, st_size=82642, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/jce.jar", {st_mode=S_IFREG|0444, st_size=82642, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/jce.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=82642, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 82642
+mmap(NULL, 82642, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf7e462000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/charsets.jar", {st_mode=S_IFREG|0644, st_size=8898567, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/charsets.jar", {st_mode=S_IFREG|0644, st_size=8898567, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/charsets.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=8898567, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 8898567
+mmap(NULL, 8898567, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf7988a000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/classes", 0x7ffca686f7b0) = -1 ENOENT (No such file or directory)
+mmap(NULL, 50331648, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf7688a000
+mmap(0x7fcf7688a000, 2555904, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7688a000
+mmap(NULL, 786432, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf767ca000
+mmap(0x7fcf767ca000, 40960, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf767ca000
+open("/usr/local/software/jdk5/jre/lib/amd64/server/classes.jsa", O_RDONLY) = -1 ENOENT (No such file or directory)
+mmap(NULL, 176160768, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf6bfca000
+munmap(0x7fcf6bfca000, 176160768)       = 0
+mmap(NULL, 176226304, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf6bfba000
+munmap(0x7fcf6bfba000, 24576)           = 0
+munmap(0x7fcf767c0000, 40960)           = 0
+mmap(NULL, 348160, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf7e40d000
+mmap(0x7fcf7e461000, 4096, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e461000
+mmap(0x7fcf6bfc0000, 2686976, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf6bfc0000
+mmap(0x7fcf7e40d000, 8192, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e40d000
+mmap(0x7fcf6dbc0000, 1835008, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf6dbc0000
+mmap(NULL, 118784, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf6bfa3000
+mmap(0x7fcf6bfa3000, 4096, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf6bfa3000
+mmap(0x7fcf7e41b000, 4096, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e41b000
+mmap(0x7fcf713c0000, 21757952, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf713c0000
+mmap(NULL, 176128, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fcf6bf78000
+mmap(0x7fcf6bf78000, 45056, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf6bf78000
+mmap(0x7fcf7e437000, 45056, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e437000
+mmap(NULL, 163840, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf6bf50000
+brk(NULL)                               = 0x4138f000
+brk(0x413b7000)                         = 0x413b7000
+brk(NULL)                               = 0x413b7000
+brk(0x413da000)                         = 0x413da000
+open(".hotspot_compiler", O_RDONLY)     = -1 ENOENT (No such file or directory)
+brk(NULL)                               = 0x413da000
+brk(0x413fc000)                         = 0x413fc000
+brk(NULL)                               = 0x413fc000
+brk(0x4141f000)                         = 0x4141f000
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6be4f000
+mprotect(0x7fcf6be4f000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fcf6bf4efb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6bf4f9d0, tls=0x7fcf6bf4f700, child_tidptr=0x7fcf6bf4f9d0) = 31986
+futex(0x4140c464, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x4140c1c8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x4140c1c8, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x4140c460, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x4140c464, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x4140c460, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+futex(0x4140c4a4, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x41372b98, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41372b98, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31985, SCHED_OTHER, [5]) = -1 EINVAL (Invalid argument)
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6bd4e000
+clone(child_stack=0x7fcf6be4dfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6be4e9d0, tls=0x7fcf6be4e700, child_tidptr=0x7fcf6be4e9d0) = 31987
+futex(0x41410854, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x414105b8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x414105b8, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31987, SCHED_OTHER, [10]) = -1 EINVAL (Invalid argument)
+futex(0x41410850, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41410854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41410850, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6bc4d000
+clone(child_stack=0x7fcf6bd4cfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6bd4d9d0, tls=0x7fcf6bd4d700, child_tidptr=0x7fcf6bd4d9d0) = 31988
+futex(0x41411654, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x414113b8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x414113b8, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31988, SCHED_OTHER, [8]) = -1 EINVAL (Invalid argument)
+futex(0x41411650, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41411654, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41411650, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+uname({sysname="Linux", nodename="iZ2ze6377ws99owuo6b9r1Z", ...}) = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=106172832, ...}) = 0
+mmap(NULL, 106172832, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fcf55abe000
+close(3)                                = 0
+getuid()                                = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=920, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fa000
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 920
+close(3)                                = 0
+munmap(0x7fcf7e5fa000, 4096)            = 0
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=556, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=556, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e5fa000
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0\0\2\0\0\0\0"..., 4096) = 556
+lseek(3, -348, SEEK_CUR)                = 208
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\3\0\0\0\3\0\0\0\0"..., 4096) = 348
+close(3)                                = 0
+munmap(0x7fcf7e5fa000, 4096)            = 0
+getcwd("/usr/local/software/projects/nio", 4096) = 33
+brk(NULL)                               = 0x4141f000
+brk(0x41440000)                         = 0x41440000
+stat("/usr/local/software/jdk5/jre/lib/amd64/libzip.so", {st_mode=S_IFREG|0755, st_size=80664, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/amd64", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/amd64/libzip.so", {st_mode=S_IFREG|0755, st_size=80664, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/amd64/libzip.so", {st_mode=S_IFREG|0755, st_size=80664, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/amd64/libzip.so", {st_mode=S_IFREG|0755, st_size=80664, ...}) = 0
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x7fcf7d7d71e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x7fcf7d7d71e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x7fcf7d7d71e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+openat(AT_FDCWD, "/usr/local/software/jdk5/jre/lib/ext", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+getdents(3, /* 6 entries */, 32768)     = 200
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/ext", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunjce_provider.jar", {st_mode=S_IFREG|0444, st_size=158419, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/dnsns.jar", {st_mode=S_IFREG|0644, st_size=8215, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/localedata.jar", {st_mode=S_IFREG|0644, st_size=810816, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/projects", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/projects/nio", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/local/software/projects/nio", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk1.8.0_231", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk1.8.0_231/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk1.8.0_231/lib/dt.jar", {st_mode=S_IFREG|0644, st_size=163047, ...}) = 0
+stat("/usr/local/software/jdk1.8.0_231/lib/dt.jar", {st_mode=S_IFREG|0644, st_size=163047, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk1.8.0_231", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk1.8.0_231/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/jdk1.8.0_231/lib/tools.jar", {st_mode=S_IFREG|0644, st_size=18307883, ...}) = 0
+stat("/usr/local/software/jdk1.8.0_231/lib/tools.jar", {st_mode=S_IFREG|0644, st_size=18307883, ...}) = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6bb4c000
+clone(child_stack=0x7fcf6bc4bfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6bc4c9d0, tls=0x7fcf6bc4c700, child_tidptr=0x7fcf6bc4c9d0) = 31989
+futex(0x41423174, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x41422ed8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41422ed8, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x41423170, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41423174, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41423170, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x7fcf7d7d71e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fcf7e1d0630}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6ba4b000
+mprotect(0x7fcf6ba4b000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fcf6bb4afb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6bb4b9d0, tls=0x7fcf6bb4b700, child_tidptr=0x7fcf6bb4b9d0) = 31990
+futex(0x41424664, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x414243c8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x414243c8, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31990, SCHED_OTHER, [9]) = -1 EINVAL (Invalid argument)
+futex(0x41424660, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41424664, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41424660, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+sched_yield()                           = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6b94a000
+mprotect(0x7fcf6b94a000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fcf6ba49fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6ba4a9d0, tls=0x7fcf6ba4a700, child_tidptr=0x7fcf6ba4a9d0) = 31991
+futex(0x41425b54, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x414258b8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x414258b8, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31991, SCHED_OTHER, [9]) = -1 EINVAL (Invalid argument)
+futex(0x41425b50, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41425b54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41425b50, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+sched_yield()                           = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6b849000
+mprotect(0x7fcf6b849000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fcf6b948fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6b9499d0, tls=0x7fcf6b949700, child_tidptr=0x7fcf6b9499d0) = 31992
+futex(0x41427014, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x41426d78, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41426d78, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31992, SCHED_OTHER, [9]) = -1 EINVAL (Invalid argument)
+futex(0x41427010, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41427014, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41427010, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+sched_yield()                           = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6b748000
+clone(child_stack=0x7fcf6b847fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6b8489d0, tls=0x7fcf6b848700, child_tidptr=0x7fcf6b8489d0) = 31993
+futex(0x41428b84, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x414288e8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x414288e8, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x41428b80, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x41428b84, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x41428b80, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+mmap(NULL, 1052672, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fcf6b647000
+mprotect(0x7fcf6b647000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fcf6b746fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fcf6b7479d0, tls=0x7fcf6b747700, child_tidptr=0x7fcf6b7479d0) = 31994
+futex(0x4142a5a4, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x4142a308, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x4142a308, FUTEX_WAKE_PRIVATE, 1) = 0
+sched_setscheduler(31994, SCHED_OTHER, [9]) = -1 EINVAL (Invalid argument)
+futex(0x4142a5a0, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x4142a5a4, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x4142a5a0, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/ext/sunpkcs11.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=175949, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 175949
+mmap(NULL, 175949, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf6b61c000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunjce_provider.jar", {st_mode=S_IFREG|0444, st_size=158419, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/sunjce_provider.jar", {st_mode=S_IFREG|0444, st_size=158419, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/ext/sunjce_provider.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=158419, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 158419
+mmap(NULL, 158419, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf6b5f5000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/dnsns.jar", {st_mode=S_IFREG|0644, st_size=8215, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/dnsns.jar", {st_mode=S_IFREG|0644, st_size=8215, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/ext/dnsns.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=8215, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 8215
+mmap(NULL, 8215, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf7e5f8000
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/localedata.jar", {st_mode=S_IFREG|0644, st_size=810816, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/ext/localedata.jar", {st_mode=S_IFREG|0644, st_size=810816, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/ext/localedata.jar", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=810816, ...}) = 0
+lseek(3, 0, SEEK_END)                   = 810816
+mmap(NULL, 810816, PROT_READ, MAP_SHARED, 3, 0) = 0x7fcf6b52f000
+close(3)                                = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/projects", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/local/software/projects/nio", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/local/software/projects/nio/ServerSocketTest.class", {st_mode=S_IFREG|0644, st_size=1327, ...}) = 0
+open("/usr/local/software/projects/nio/ServerSocketTest.class", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1327, ...}) = 0
+stat("/usr/local/software/projects/nio/ServerSocketTest.class", {st_mode=S_IFREG|0644, st_size=1327, ...}) = 0
+read(3, "\312\376\272\276\0\0\0001\0c\n\0\34\0'\7\0(\n\0\2\0)\n\0\2\0*\7\0+\n"..., 1024) = 1024
+read(3, "\0\5write\1\0\5flush\0!\0\33\0\34\0\0\0\0\0\2\0\1\0\35\0"..., 303) = 303
+close(3)                                = 0
+brk(NULL)                               = 0x41440000
+brk(0x41462000)                         = 0x41462000
+stat("/usr/local/software/jdk5/jre/lib/amd64/libnet.so", {st_mode=S_IFREG|0755, st_size=81360, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/amd64/libnet.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000@\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=81360, ...}) = 0
+mmap(NULL, 1128296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fcf6b41b000
+mprotect(0x7fcf6b42d000, 1044480, PROT_NONE) = 0
+mmap(0x7fcf6b52c000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7fcf6b52c000
+close(3)                                = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=65535, rlim_max=65535}) = 0
+mmap(NULL, 3145728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf6b11b000
+rt_sigaction(SIGRT_29, {sa_handler=0x7fcf6b429cc0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fcf7e1d0630}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RT_29], NULL, 8) = 0
+socket(AF_INET6, SOCK_STREAM, IPPROTO_IP) = 3
+getsockname(0, 0x7ffca686e3a0, [28])    = -1 ENOTSOCK (Socket operation on non-socket)
+open("/proc/net/if_inet6", O_RDONLY)    = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e40c000
+read(4, "00000000000000000000000000000001"..., 1024) = 333
+close(4)                                = 0
+munmap(0x7fcf7e40c000, 4096)            = 0
+close(3)                                = 0
+open("/proc/net/ipv6_route", O_RDONLY)  = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e40c000
+read(3, "00000000000000000000000000000000"..., 1024) = 1024
+read(3, "0000000 00200200       lo\n2002e0"..., 1024) = 1024
+read(3, "000000000000 00000100 00000000 0"..., 1024) = 1024
+close(3)                                = 0
+munmap(0x7fcf7e40c000, 4096)            = 0
+open("/proc/net/if_inet6", O_RDONLY)    = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e40c000
+read(3, "00000000000000000000000000000001"..., 1024) = 333
+close(3)                                = 0
+munmap(0x7fcf7e40c000, 4096)            = 0
+open("/proc/net/if_inet6", O_RDONLY)    = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fcf7e40c000
+read(3, "00000000000000000000000000000001"..., 1024) = 333
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+munmap(0x7fcf7e40c000, 4096)            = 0
+socket(AF_INET6, SOCK_STREAM, IPPROTO_IP) = 3
+listen(3, 1)                            = 0
+getsockname(3, {sa_family=AF_INET6, sin6_port=htons(48622), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+socket(AF_INET6, SOCK_STREAM, IPPROTO_IP) = 4
+connect(4, {sa_family=AF_INET6, sin6_port=htons(48622), inet_pton(AF_INET6, "::1", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, 28) = 0
+fcntl(3, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+accept(3, {sa_family=AF_INET6, sin6_port=htons(53352), inet_pton(AF_INET6, "::1", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 5
+shutdown(4, SHUT_RDWR)                  = 0
+close(5)                                = 0
+close(3)                                = 0
+stat("/usr/local/software/jdk5/jre/lib/amd64/libnet.so", {st_mode=S_IFREG|0755, st_size=81360, ...}) = 0
+stat("/usr/local/software/jdk5/jre/lib/security/java.security", {st_mode=S_IFREG|0444, st_size=10168, ...}) = 0
+open("/usr/local/software/jdk5/jre/lib/security/java.security", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=10168, ...}) = 0
+read(3, "#\n# This is the \"master security"..., 8192) = 8192
+read(3, "the OCSP responder when the defa"..., 8192) = 1976
+fstat(3, {st_mode=S_IFREG|0444, st_size=10168, ...}) = 0
+lseek(3, 0, SEEK_CUR)                   = 10168
+lseek(3, 0, SEEK_END)                   = 10168
+lseek(3, 10168, SEEK_SET)               = 10168
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+socket(AF_INET6, SOCK_STREAM, IPPROTO_IP) = 3
+setsockopt(3, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(3, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, 28) = 0
+listen(3, 50)                           = 0
+accept(3, {sa_family=AF_INET6, sin6_port=htons(34562), inet_pton(AF_INET6, "::ffff:101.206.168.44", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 5
+recvfrom(5, "h", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "e", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "l", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "l", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "o", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:hello", 17)       = 17
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+recvfrom(5, "1", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:1", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+recvfrom(5, "2", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:2", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+recvfrom(5, "3", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:3", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+recvfrom(5, "q", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "u", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "it", 8192, 0, NULL, NULL)  = 2
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:quit", 16)        = 16
+write(1, "\n", 1)                       = 1
+dup2(4, 5)                              = 5
+close(5)                                = 0
+accept(3, {sa_family=AF_INET6, sin6_port=htons(34564), inet_pton(AF_INET6, "::ffff:101.206.168.44", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 5
+recvfrom(5, "2\r\n3\r\n4\r\n", 8192, 0, NULL, NULL) = 9
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:2", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+write(1, "client send:3", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+write(1, "client send:4", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+recvfrom(5, "q", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "u", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "i", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "t", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:quit", 16)        = 16
+write(1, "\n", 1)                       = 1
+dup2(4, 5)                              = 5
+close(5)                                = 0
+accept(3, {sa_family=AF_INET6, sin6_port=htons(34565), inet_pton(AF_INET6, "::ffff:101.206.168.44", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 5
+recvfrom(5, "5\r\n6\r\n7\r\n", 8192, 0, NULL, NULL) = 9
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:5", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+write(1, "client send:6", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+write(1, "client send:7", 13)           = 13
+write(1, "\n", 1)                       = 1
+sendto(5, "success", 7, 0, NULL, 0)     = 7
+recvfrom(5, "q", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "u", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "i", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "t", 8192, 0, NULL, NULL)   = 1
+ioctl(5, FIONREAD, [0])                 = 0
+recvfrom(5, "\r\n", 8192, 0, NULL, NULL) = 2
+ioctl(5, FIONREAD, [0])                 = 0
+write(1, "client send:quit", 16)        = 16
+write(1, "\n", 1)                       = 1
+dup2(4, 5)                              = 5
+close(5)                                = 0
+accept(3, 
