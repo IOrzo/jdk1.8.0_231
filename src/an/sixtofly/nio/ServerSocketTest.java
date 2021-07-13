@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ServerSocketTest {
 
     /**
-     * jdk8 编译运行, 开启了三个客户端， 一次性发送信息如下，对应的系统调用流程在 bio.29991 文件中
+     * jdk8 编译运行, 开启了三个客户端， 一次性发送信息如下，对应的系统调用流程在 bio.29991 文件中 (有删减)
      * jdk8 bio 中使用了多路复用器 poll
      * client send:hello
      * client send:1
