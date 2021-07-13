@@ -1,0 +1,348 @@
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+
+socket(AF_INET6, SOCK_STREAM, IPPROTO_IP) = 6
+getsockname(0, 0x7f65936c3930, [28])    = -1 ENOTSOCK (Socket operation on non-socket)
+open("/proc/net/if_inet6", O_RDONLY)    = 7
+fstat(7, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f65936cd000
+read(7, "00000000000000000000000000000001"..., 1024) = 333
+close(7)                                = 0
+
+epoll_create(256)                       = 8
+lseek(3, 48470636, SEEK_SET)            = 48470636
+read(3, "PK\3\4\n\0\0\10\0\0\201\30EO\240\264\30u\337\1\0\0\337\1\0\0&\0\0\0", 30) = 30
+lseek(3, 48470704, SEEK_SET)            = 48470704
+read(3, "\312\376\272\276\0\0\0004\0\36\n\0\6\0\20\t\0\5\0\21\t\0\5\0\22\n\0\23\0\24\7\0"..., 479) = 479
+lseek(3, 48626856, SEEK_SET)            = 48626856
+read(3, "PK\3\4\n\0\0\10\0\0\201\30EOj\325\235\263\345\r\0\0\345\r\0\0\35\0\0\0", 30) = 30
+lseek(3, 48626915, SEEK_SET)            = 48626915
+read(3, "\312\376\272\276\0\0\0004\0\260\n\0/\0m\t\0\7\0n\t\0\7\0o\t\0\7\0p\n\0"..., 3557) = 3557
+mprotect(0x7f658c100000, 77824, PROT_READ|PROT_WRITE) = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 6, {EPOLLIN, {u32=6, u64=140071768424454}}) = 0
+
+socket(AF_INET6, SOCK_STREAM, IPPROTO_IP) = 9
+setsockopt(9, SOL_IPV6, IPV6_V6ONLY, [0], 4) = 0
+setsockopt(9, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 1
+stat("/usr/local/software/jdk1.8.0_231/jre/lib/amd64/libnet.so", {st_mode=S_IFREG|0755, st_size=112768, ...}) = 0
+socketpair(AF_UNIX, SOCK_STREAM, 0, [10, 11]) = 0
+shutdown(10, SHUT_RDWR)                 = 0
+close(11)                               = 0
+
+bind(9, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, 28) = 0
+listen(9, 50)                           = 0
+getsockname(9, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+getsockname(9, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+fcntl(9, F_GETFL)                       = 0x2 (flags O_RDWR)
+fcntl(9, F_SETFL, O_RDWR|O_NONBLOCK)    = 0
+
+accept(9, 0x7f658c0c54c0, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+lseek(3, 30258212, SEEK_SET)            = 30258212
+read(3, "PK\3\4\n\0\0\10\0\0z\30EO\vk\250\204~\2\0\0~\2\0\0.\0\0\0", 30) = 30
+lseek(3, 30258288, SEEK_SET)            = 30258288
+read(3, "\312\376\272\276\0\0\0004\0 \t\0\4\0\24\n\0\5\0\25\n\0\22\0\26\7\0\27\7\0\31\7"..., 638) = 638
+epoll_ctl(8, EPOLL_CTL_ADD, 9, {EPOLLIN, {u32=9, u64=140071768424457}}) = 0
+epoll_wait(8, [], 8192, 0)              = 0
+
+lseek(3, 62617614, SEEK_SET)            = 62617614
+read(3, "PK\3\4\n\0\0\10\0\0x\30EO9\267\215\270R\6\0\0R\6\0\0;\0\0\0", 30) = 30
+lseek(3, 62617703, SEEK_SET)            = 62617703
+read(3, "\312\376\272\276\0\0\0004\0:\7\0!\n\0\v\0\"\t\0\10\0#\n\0\1\0$\t\0\v\0"..., 1618) = 1618
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487817, tv_nsec=941659941}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c1131a0, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487820, tv_nsec=941994711}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, {sa_family=AF_INET6, sin6_port=htons(18808), inet_pton(AF_INET6, "::ffff:119.4.253.242", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 11
+fcntl(11, F_GETFL)                      = 0x2 (flags O_RDWR)
+
+
+read(3, "\312\376\272\276\0\0\0004\0\17\7\0\v\7\0\f\7\0\r\1\0\5write\1\0\33(["..., 324) = 324
+getsockname(11, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::ffff:172.25.96.85", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+getsockname(11, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::ffff:172.25.96.85", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+fcntl(11, F_GETFL)                      = 0x2 (flags O_RDWR)
+fcntl(11, F_SETFL, O_RDWR|O_NONBLOCK)   = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 11, {EPOLLIN, {u32=11, u64=140071768424459}}) = 0
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487823, tv_nsec=943885487}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, {sa_family=AF_INET6, sin6_port=htons(18809), inet_pton(AF_INET6, "::ffff:119.4.253.242", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 12
+fcntl(12, F_GETFL)                      = 0x2 (flags O_RDWR)
+getsockname(12, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::ffff:172.25.96.85", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+getsockname(12, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::ffff:172.25.96.85", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+fcntl(12, F_GETFL)                      = 0x2 (flags O_RDWR)
+fcntl(12, F_SETFL, O_RDWR|O_NONBLOCK)   = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 12, {EPOLLIN, {u32=12, u64=140071768424460}}) = 0
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487826, tv_nsec=944437619}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, {sa_family=AF_INET6, sin6_port=htons(18810), inet_pton(AF_INET6, "::ffff:119.4.253.242", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 13
+fcntl(13, F_GETFL)                      = 0x2 (flags O_RDWR)
+getsockname(13, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::ffff:172.25.96.85", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+getsockname(13, {sa_family=AF_INET6, sin6_port=htons(9110), inet_pton(AF_INET6, "::ffff:172.25.96.85", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+fcntl(13, F_GETFL)                      = 0x2 (flags O_RDWR)
+fcntl(13, F_SETFL, O_RDWR|O_NONBLOCK)   = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 13, {EPOLLIN, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487829, tv_nsec=944954428}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487832, tv_nsec=945217558}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [{EPOLLIN, {u32=11, u64=140071768424459}}, {EPOLLIN, {u32=12, u64=140071768424460}}], 8192, 0) = 2
+lseek(3, 60519902, SEEK_SET)            = 60519902
+read(3, "PK\3\4\n\0\0\10\0\0w\30EOO\352Y\271\306\7\0\0\306\7\0\0\36\0\0\0", 30) = 30
+lseek(3, 60519962, SEEK_SET)            = 60519962
+read(3, "\312\376\272\276\0\0\0004\0c\t\0\25\0004\n\0\26\0005\t\0006\0007\n\0006\08\7\0"..., 1990) = 1990
+lseek(3, 60519112, SEEK_SET)            = 60519112
+read(3, "PK\3\4\n\0\0\10\0\0w\30EO\271^\357!\325\2\0\0\325\2\0\0#\0\0\0", 30) = 30
+lseek(3, 60519177, SEEK_SET)            = 60519177
+read(3, "\312\376\272\276\0\0\0004\0(\t\0\5\0\27\n\0\6\0\30\n\0\5\0\31\t\0\32\0\33\7\0"..., 725) = 725
+lseek(3, 62572432, SEEK_SET)            = 62572432
+read(3, "PK\3\4\n\0\0\10\0\0w\30EO\332\321\232\331\253\6\0\0\253\6\0\0$\0\0\0", 30) = 30
+lseek(3, 62572498, SEEK_SET)            = 62572498
+read(3, "\312\376\272\276\0\0\0004\0T\t\0\24\0005\n\0\25\0006\t\0007\08\t\0\24\09\t\0"..., 1707) = 1707
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+lseek(3, 59156574, SEEK_SET)            = 59156574
+read(3, "PK\3\4\n\0\0\10\0\0\201\30EO]\264\25\242F\7\0\0F\7\0\0!\0\0\0", 30) = 30
+lseek(3, 59156637, SEEK_SET)            = 59156637
+read(3, "\312\376\272\276\0\0\0004\0Q\n\0\20\0000\n\0\23\0001\7\0002\t\0\22\0003\t\0\22\0"..., 1862) = 1862
+lseek(3, 59155306, SEEK_SET)            = 59155306
+read(3, "PK\3\4\n\0\0\10\0\0\215\30EOK\336\22\333\253\4\0\0\253\4\0\0+\0\0\0", 30) = 30
+lseek(3, 59155379, SEEK_SET)            = 59155379
+read(3, "\312\376\272\276\0\0\0004\0I\n\0\17\0)\n\0\20\0*\t\0\17\0+\7\0,\n\0\4\0"..., 1195) = 1195
+lseek(3, 59169599, SEEK_SET)            = 59169599
+read(3, "PK\3\4\n\0\0\10\0\0\214\30EO7\23{C\30\n\0\0\30\n\0\0#\0\0\0", 30) = 30
+lseek(3, 59169664, SEEK_SET)            = 59169664
+read(3, "\312\376\272\276\0\0\0004\0g\n\0\25\0O\n\0\24\0P\n\0\24\0Q\n\0\24\0R\n\0"..., 2584) = 2584
+lseek(3, 59168558, SEEK_SET)            = 59168558
+read(3, "PK\3\4\n\0\0\10\0\0\200\30EO\2a\r\23\324\3\0\0\324\3\0\0\37\0\0\0", 30) = 30
+lseek(3, 59168619, SEEK_SET)            = 59168619
+read(3, "\312\376\272\276\0\0\0004\0,\n\0\3\0(\7\0)\7\0*\1\0\7NO_LOCK\1"..., 980) = 980
+socketpair(AF_UNIX, SOCK_STREAM, 0, [14, 15]) = 0
+close(15)                               = 0
+read(12, "2", 50)                       = 1
+lseek(3, 59164956, SEEK_SET)            = 59164956
+read(3, "PK\3\4\n\0\0\10\0\0\201\30EO\332^j*U\3\0\0U\3\0\0\31\0\0\0", 30) = 30
+lseek(3, 59165011, SEEK_SET)            = 59165011
+read(3, "\312\376\272\276\0\0\0004\0)\n\0\t\0&\7\0'\5\377\377\377\377\377\377\377\376\5\377\377\377\377"..., 853) = 853
+write(1, "result:2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(11, "1", 50)                       = 1
+write(1, "result:1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487835, tv_nsec=948366856}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 12, {EPOLLOUT, {u32=12, u64=140071768424460}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLOUT, {u32=11, u64=140071768424459}}) = 0
+epoll_wait(8, [{EPOLLOUT, {u32=11, u64=140071768424459}}, {EPOLLOUT, {u32=12, u64=140071768424460}}, {EPOLLIN, {u32=13, u64=140071768424461}}], 8192, 0) = 3
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(12, "server receiver:2\r\n", 19)  = 19
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(11, "server receiver:1\r\n", 19)  = 19
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(13, "3", 50)                       = 1
+write(1, "result:3\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487838, tv_nsec=949746546}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 12, {EPOLLIN, {u32=12, u64=140071768424460}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLIN, {u32=11, u64=140071768424459}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 13, {EPOLLOUT, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [{EPOLLIN, {u32=11, u64=140071768424459}}, {EPOLLOUT, {u32=13, u64=140071768424461}}], 8192, 0) = 2
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(11, "4", 50)                       = 1
+write(1, "result:4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(13, "server receiver:3\r\n", 19)  = 19
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487841, tv_nsec=950642476}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLOUT, {u32=11, u64=140071768424459}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 13, {EPOLLIN, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [{EPOLLOUT, {u32=11, u64=140071768424459}}], 8192, 0) = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+write(11, "server receiver:4\r\n", 19)  = 19
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487844, tv_nsec=951667946}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLIN, {u32=11, u64=140071768424459}}) = 0
+epoll_wait(8, [{EPOLLIN, {u32=11, u64=140071768424459}}, {EPOLLIN, {u32=12, u64=140071768424460}}, {EPOLLIN, {u32=13, u64=140071768424461}}], 8192, 0) = 3
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(12, "5\r\n", 50)                   = 3
+write(1, "result:5\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(11, "\r\n", 50)                    = 2
+write(1, "result:\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(13, "6\r\n", 50)                   = 3
+write(1, "result:6\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487847, tv_nsec=953313257}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 12, {EPOLLOUT, {u32=12, u64=140071768424460}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLOUT, {u32=11, u64=140071768424459}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 13, {EPOLLOUT, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [{EPOLLOUT, {u32=11, u64=140071768424459}}, {EPOLLOUT, {u32=12, u64=140071768424460}}, {EPOLLOUT, {u32=13, u64=140071768424461}}], 8192, 0) = 3
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(12, "server receiver:5\r\n", 19)  = 19
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(11, "server receiver:\r\r\n", 19) = 19
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(13, "server receiver:6\r\n", 19)  = 19
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487850, tv_nsec=954410520}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 12, {EPOLLIN, {u32=12, u64=140071768424460}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLIN, {u32=11, u64=140071768424459}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 13, {EPOLLIN, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [{EPOLLIN, {u32=11, u64=140071768424459}}, {EPOLLIN, {u32=12, u64=140071768424460}}], 8192, 0) = 2
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(12, "8\r\n", 50)                   = 3
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "result:8\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(11, "7\r\n", 50)                   = 3
+write(1, "result:7\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487853, tv_nsec=955968672}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 12, {EPOLLOUT, {u32=12, u64=140071768424460}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLOUT, {u32=11, u64=140071768424459}}) = 0
+epoll_wait(8, [{EPOLLOUT, {u32=11, u64=140071768424459}}, {EPOLLOUT, {u32=12, u64=140071768424460}}, {EPOLLIN, {u32=13, u64=140071768424461}}], 8192, 0) = 3
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(12, "server receiver:8\r\n", 19)  = 19
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(11, "server receiver:7\r\n", 19)  = 19
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+read(13, "9\r\n", 50)                   = 3
+write(1, "result:9\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487856, tv_nsec=957732808}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 12, {EPOLLIN, {u32=12, u64=140071768424460}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLIN, {u32=11, u64=140071768424459}}) = 0
+epoll_ctl(8, EPOLL_CTL_MOD, 13, {EPOLLOUT, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [{EPOLLOUT, {u32=13, u64=140071768424461}}], 8192, 0) = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(13, "server receiver:9\r\n", 19)  = 19
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487859, tv_nsec=958656011}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 13, {EPOLLIN, {u32=13, u64=140071768424461}}) = 0
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487862, tv_nsec=958943012}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487865, tv_nsec=959235136}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487868, tv_nsec=959503630}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487871, tv_nsec=959815766}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [{EPOLLIN, {u32=11, u64=140071768424459}}], 8192, 0) = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(1, "key.isReadable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+read(11, "quit\r\n", 50)                = 6
+write(1, "result:quit\r\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 57) = 57
+write(1, "\n", 1)                       = 1
+futex(0x7f658c0b0454, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f658c0b0450, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 1
+futex(0x7f658c0b0428, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487874, tv_nsec=960623981}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLOUT, {u32=11, u64=140071768424459}}) = 0
+epoll_wait(8, [{EPOLLOUT, {u32=11, u64=140071768424459}}], 8192, 0) = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+write(11, "server receiver:q\r\n", 19)  = 19
+write(1, "key.isWritable()", 16)        = 16
+write(1, "\n", 1)                       = 1
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487877, tv_nsec=961404697}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_ctl(8, EPOLL_CTL_MOD, 11, {EPOLLIN, {u32=11, u64=140071768424459}}) = 0
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487880, tv_nsec=961716224}, 0xffffffff) = -1 ETIMEDOUT (Connection timed out)
+futex(0x7f658c00a428, FUTEX_WAKE_PRIVATE, 1) = 0
+accept(9, 0x7f658c112810, [28])         = -1 EAGAIN (Resource temporarily unavailable)
+epoll_wait(8, [], 8192, 0)              = 0
+futex(0x7f658c00a454, FUTEX_WAIT_BITSET_PRIVATE, 1, {tv_sec=6487883, tv_nsec=962016870}, 0xffffffff) = ?
++++ exited with 130 +++
