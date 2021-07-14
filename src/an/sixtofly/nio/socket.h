@@ -199,6 +199,11 @@ extern int setsockopt (int __fd, int __level, int __optname,
    Returns 0 on success, -1 for errors.  */
 extern int listen (int __fd, int __n) __THROW;
 
+/*
+等待套接字 FD 上的连接。当连接到达时，打开一个新的套接字与之通信，
+将 *ADDR（*ADDR_LEN 字节长）设置为连接对等方的地址，
+将 *ADDR_LEN 设置为地址的实际长度，并返回新套接字的描述符，或者 - 1 错误
+*/
 /* Await a connection on socket FD.
    When a connection arrives, open a new socket to communicate with it,
    set *ADDR (which is *ADDR_LEN bytes long) to the address of the connecting
