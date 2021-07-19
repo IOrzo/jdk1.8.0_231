@@ -826,7 +826,7 @@ public final class Integer extends Number implements Comparable<Integer> {
      * @return an {@code Integer} instance representing {@code i}.
      * @since  1.5
      */
-    public static Integer valueOf(int i) {
+    public static Integer valueOf(int i) {   //  自动装箱调用此方法
         if (i >= IntegerCache.low && i <= IntegerCache.high)
             return IntegerCache.cache[i + (-IntegerCache.low)];
         return new Integer(i);
@@ -889,7 +889,7 @@ public final class Integer extends Number implements Comparable<Integer> {
      * Returns the value of this {@code Integer} as an
      * {@code int}.
      */
-    public int intValue() {
+    public int intValue() {  // 自动拆箱调用此方法
         return value;
     }
 
