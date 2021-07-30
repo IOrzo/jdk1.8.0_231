@@ -189,8 +189,8 @@ public class Modifier {
     }
 
     /**
-     * Return {@code true} if the integer argument includes the
-     * {@code strictfp} modifier, {@code false} otherwise.
+     * Return {@code true} if the integer argument includes the (strictfp 关键字，即 strict float point (精确浮点)。)
+     * {@code strictfp} modifier, {@code false} otherwise. （strictfp 关键字声明一个方法时，该方法中所有的 float和 double 表达式都严格遵守 FP-strict 的限制,符合 IEEE-754 规范。）
      *
      * @param   mod a set of modifiers
      * @return {@code true} if {@code mod} includes the
