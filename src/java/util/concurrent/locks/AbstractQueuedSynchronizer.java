@@ -304,9 +304,9 @@ public abstract class AbstractQueuedSynchronizer
      * <p>The wait queue is a variant of a "CLH" (Craig, Landin, and
      * Hagersten) lock queue. CLH locks are normally used for
      * spinlocks(自旋锁).  We instead use them for blocking synchronizers, but
-     * use the same basic tactic of holding some of the control
+     * use the same basic tactic(战术) of holding some of the control
      * information about a thread in the predecessor of its node.  A
-     * "status" field in each node keeps track of whether a thread
+     * "status" field in each node keeps track(追踪) of whether a thread
      * should block.  A node is signalled when its predecessor
      * releases.  Each node of the queue otherwise serves as a
      * specific-notification-style monitor holding a single waiting
@@ -385,7 +385,7 @@ public abstract class AbstractQueuedSynchronizer
 
         /** waitStatus value to indicate thread has cancelled */
         static final int CANCELLED =  1;
-        /** waitStatus value to indicate successor's thread needs unparking */
+        /** waitStatus value to indicate successor's(后继) thread needs unparking */
         static final int SIGNAL    = -1;
         /** waitStatus value to indicate thread is waiting on condition */
         static final int CONDITION = -2;
