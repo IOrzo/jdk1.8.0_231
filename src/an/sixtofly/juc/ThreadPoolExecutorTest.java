@@ -10,7 +10,8 @@ public class ThreadPoolExecutorTest {
 
 
     public static void main(String[] args) {
-        ThreadPoolExecutorTest.testExecTask();
+//        ThreadPoolExecutorTest.testExecTask();
+        ThreadPoolExecutorTest.testZeroThread();
     }
 
 
@@ -31,5 +32,24 @@ public class ThreadPoolExecutorTest {
             });
         }
         System.out.println("queue size:" + queue.size());
+    }
+
+    /**
+     * 测试将核心线程设置为 0
+     * java.lang.IllegalArgumentException
+     */
+    public static void testZeroThread() {
+        // java.lang.IllegalArgumentException
+//        ExecutorService executorService = Executors.newFixedThreadPool(0);
+        ExecutorService executorService = new ThreadPoolExecutor(0, 1, 5, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
+        executorService.execute(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(3);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("zero threads");
+        });
+
     }
 }

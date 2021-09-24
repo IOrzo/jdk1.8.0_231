@@ -45,19 +45,19 @@ import java.util.*;
  * commands to run after a given delay, or to execute
  * periodically. This class is preferable to {@link java.util.Timer}
  * when multiple worker threads are needed, or when the additional
- * flexibility or capabilities of {@link ThreadPoolExecutor} (which
+ * flexibility(灵活性) or capabilities(能力) of {@link ThreadPoolExecutor} (which
  * this class extends) are required.
  *
  * <p>Delayed tasks execute no sooner than they are enabled, but
- * without any real-time guarantees about when, after they are
- * enabled, they will commence. Tasks scheduled for exactly the same
+ * without any real-time guarantees(保证) about when, after they are
+ * enabled, they will commence(开始). Tasks scheduled for exactly the same
  * execution time are enabled in first-in-first-out (FIFO) order of
  * submission.
  *
  * <p>When a submitted task is cancelled before it is run, execution
  * is suppressed. By default, such a cancelled task is not
  * automatically removed from the work queue until its delay
- * elapses. While this enables further inspection and monitoring, it
+ * elapses(过去了). While this enables further inspection(检查) and monitoring, it
  * may also cause unbounded retention of cancelled tasks. To avoid
  * this, set {@link #setRemoveOnCancelPolicy} to {@code true}, which
  * causes tasks to be immediately removed from the work queue at
@@ -90,7 +90,7 @@ import java.util.*;
  * disables additional task customization.  However, this class
  * provides alternative protected extension method
  * {@code decorateTask} (one version each for {@code Runnable} and
- * {@code Callable}) that can be used to customize the concrete task
+ * {@code Callable}) that can be used to customize the concrete(具体的) task
  * types used to execute commands entered via {@code execute},
  * {@code submit}, {@code schedule}, {@code scheduleAtFixedRate},
  * and {@code scheduleWithFixedDelay}.  By default, a
@@ -132,7 +132,7 @@ public class ScheduledThreadPoolExecutor
      *    delayed tasks with a delay of zero.
      *
      * 2. Using a custom queue (DelayedWorkQueue), a variant of
-     *    unbounded DelayQueue. The lack of capacity constraint and
+     *    unbounded(无界) DelayQueue. The lack of capacity constraint and
      *    the fact that corePoolSize and maximumPoolSize are
      *    effectively identical simplifies some execution mechanics
      *    (see delayedExecute) compared to ThreadPoolExecutor.

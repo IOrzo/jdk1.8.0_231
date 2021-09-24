@@ -40,7 +40,7 @@ package java.util.concurrent;
  * interface provides a way of decoupling task submission from the
  * mechanics of how each task will be run, including details of thread
  * use, scheduling, etc.  An {@code Executor} is normally used
- * instead of explicitly creating threads. For example, rather than
+ * instead of explicitly creating threads. For example, rather than(而不是)
  * invoking {@code new Thread(new(RunnableTask())).start()} for each
  * of a set of tasks, you might use:
  *
