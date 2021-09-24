@@ -576,7 +576,7 @@ public class ThreadLocal<T> {
         }
 
         /**
-         * Expunge a stale entry by rehashing any possibly colliding entries
+         * Expunge(清除) a stale entry by rehashing any possibly colliding entries
          * lying between staleSlot and the next null slot.  This also expunges
          * any other stale entries encountered before the trailing null.  See
          * Knuth, Section 6.4

@@ -28,7 +28,7 @@ package java.lang.ref;
 
 /**
  * Weak reference objects, which do not prevent their referents from being
- * made finalizable, finalized, and then reclaimed.  Weak references are most
+ * made finalizable, finalized, and then reclaimed(回收).  Weak references are most
  * often used to implement canonicalizing mappings.
  *
  * <p> Suppose that the garbage collector determines at a certain point in time
