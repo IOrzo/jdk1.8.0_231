@@ -39,7 +39,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * A synchronization aid that allows a set of threads to all wait for
- * each other to reach a common barrier point.  CyclicBarriers are
+ * each other to reach a common barrier(障碍) point.  CyclicBarriers are
  * useful in programs involving a fixed sized party of threads that
  * must occasionally wait for each other. The barrier is called
  * <em>cyclic</em> because it can be re-used after the waiting threads
@@ -116,7 +116,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *   // log the completion of this iteration
  * }}</pre>
  *
- * <p>The {@code CyclicBarrier} uses an all-or-none breakage model
+ * <p>The {@code CyclicBarrier} uses an all-or-none breakage(破损) model
  * for failed synchronization attempts: If a thread leaves a barrier
  * point prematurely because of interruption, failure, or timeout, all
  * other threads waiting at that barrier point will also leave

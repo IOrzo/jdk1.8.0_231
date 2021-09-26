@@ -28,7 +28,7 @@ import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * A facility for threads to schedule tasks for future execution in a
+ * A facility(设施) for threads to schedule tasks for future execution in a
  * background thread.  Tasks may be scheduled for one-time execution, or for
  * repeated execution at regular intervals.
  *

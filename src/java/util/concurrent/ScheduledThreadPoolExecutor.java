@@ -63,9 +63,9 @@ import java.util.*;
  * causes tasks to be immediately removed from the work queue at
  * time of cancellation.
  *
- * <p>Successive executions of a task scheduled via
+ * <p>Successive(连续的) executions of a task scheduled via
  * {@code scheduleAtFixedRate} or
- * {@code scheduleWithFixedDelay} do not overlap. While different
+ * {@code scheduleWithFixedDelay} do not overlap(重叠). While different
  * executions may be performed by different threads, the effects of
  * prior executions <a
  * href="package-summary.html#MemoryVisibility"><i>happen-before</i></a>
