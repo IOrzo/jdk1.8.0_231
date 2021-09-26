@@ -67,7 +67,7 @@ import java.util.Map.Entry;
 
 public abstract class AbstractMap<K,V> implements Map<K,V> {
     /**
-     * Sole constructor.  (For invocation by subclass constructors, typically
+     * Sole(唯一的) constructor.  (For invocation by subclass constructors, typically
      * implicit.)
      */
     protected AbstractMap() {
@@ -564,7 +564,7 @@ public abstract class AbstractMap<K,V> implements Map<K,V> {
     }
 
     /**
-     * Returns a shallow copy of this <tt>AbstractMap</tt> instance: the keys
+     * Returns a shallow(浅) copy of this <tt>AbstractMap</tt> instance: the keys
      * and values themselves are not cloned.
      *
      * @return a shallow copy of this map
@@ -713,7 +713,7 @@ public abstract class AbstractMap<K,V> implements Map<K,V> {
         }
 
         /**
-         * Returns a String representation of this map entry.  This
+         * Returns a String representation(表示) of this map entry.  This
          * implementation returns the string representation of this
          * entry's key followed by the equals character ("<tt>=</tt>")
          * followed by the string representation of this entry's value.
