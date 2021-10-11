@@ -62,11 +62,11 @@ import sun.misc.SharedSecrets;
  * get before its capacity is automatically increased.  When the number of
  * entries in the hash table exceeds the product of the load factor and the
  * current capacity, the hash table is <i>rehashed</i> (that is, internal data
- * structures are rebuilt) so that the hash table has approximately twice the
+ * structures are rebuilt) so that the hash table has approximately(大约) twice the
  * number of buckets.
  *
  * <p>As a general rule, the default load factor (.75) offers a good
- * tradeoff between time and space costs.  Higher values decrease the
+ * tradeoff(权衡) between time and space costs.  Higher values decrease the
  * space overhead but increase the lookup cost (reflected in most of
  * the operations of the <tt>HashMap</tt> class, including
  * <tt>get</tt> and <tt>put</tt>).  The expected number of entries in
@@ -686,7 +686,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
             }
             else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
                      oldCap >= DEFAULT_INITIAL_CAPACITY)
-                 newThr = oldThr << 1; // double threshold
+                 newThr = oldThr << 1; // double threshold  使用位运算提高效率，等同于 newCap * loadFactor
         }
         else if (oldThr > 0) // initial capacity was placed in threshold 第一次时候，使用 threshold 赋值初始值
             newCap = oldThr;
@@ -2327,7 +2327,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
                         }
                     }
                 }
-                else { // symmetric
+                else { // symmetric 对称的
                     if (xpl != null && xpl.red) {
                         xpl.red = false;
                         xp.red = true;
