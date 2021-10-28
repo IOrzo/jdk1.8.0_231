@@ -1197,8 +1197,7 @@ public abstract class AbstractQueuedSynchronizer
     public final void acquire(int arg) {
         if (!tryAcquire(arg) &&
             acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
-            // 中断当前线程
-            selfInterrupt();
+            selfInterrupt(); // 中断当前线程
     }
 
     /**
@@ -1261,8 +1260,7 @@ public abstract class AbstractQueuedSynchronizer
     public final boolean release(int arg) {
         if (tryRelease(arg)) {
             Node h = head;
-            // h.waitStatus != 0 说明头结点后面有结点，因为有结点的话，会把前驱结点状态修改为-1
-            if (h != null && h.waitStatus != 0)
+            if (h != null && h.waitStatus != 0) // h.waitStatus != 0 说明头结点后面有结点，因为有结点的话，会把前驱结点状态修改为-1
                 unparkSuccessor(h);
             return true;
         }

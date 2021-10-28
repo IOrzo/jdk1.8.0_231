@@ -30,8 +30,8 @@ package java.util;
  * The root class from which all event state objects shall be derived.
  * <p>
  * All Events are constructed with a reference to the object, the "source",
- * that is logically deemed to be the object upon which the Event in question
- * initially occurred upon.
+ * that is logically(逻辑) deemed(视为) to be the object upon which the Event in question
+ * initially occurred upon. 在逻辑上被认为是相关事件最初发生的对象
  *
  * @since JDK1.1
  */

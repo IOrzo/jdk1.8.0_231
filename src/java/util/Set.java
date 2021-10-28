@@ -165,7 +165,7 @@ public interface Set<E> extends Collection<E> {
      *
      * <p>Like the {@link #toArray()} method, this method acts as bridge between
      * array-based and collection-based APIs.  Further, this method allows
-     * precise control over the runtime type of the output array, and may,
+     * precise(精确的) control over the runtime type of the output array, and may,
      * under certain circumstances, be used to save allocation costs.
      *
      * <p>Suppose <tt>x</tt> is a set known to contain only strings.
