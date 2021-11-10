@@ -70,7 +70,7 @@ public class MergeSortTest {
                 temp[current++] = data[ri++];
             }
 
-            System.arraycopy(temp, 0, data, 0, right + 1);
+            System.arraycopy(temp, left, data, left, right - left + 1);
         }
 
 

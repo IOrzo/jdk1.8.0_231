@@ -2,9 +2,9 @@ package an.sixtofly.algorithms;
 
 /**
  * 快速排序
- * 1. 选定pivot中心轴
- * 2. 将大于pivot的数字放在pivot的右边
- * 3. 将小于pivot的数字放在pivot的左边
+ * 1. 选定 pivot 中心轴
+ * 2. 将大于 pivot 的数字放在 pivot 的右边
+ * 3. 将小于 pivot 的数字放在 pivot 的左边
  * 4. 分别对左右子序列重复前三步操作
  *
  * 平均时间复杂度：O(NlogN)
@@ -34,7 +34,7 @@ public class QuickSortTest {
 
     /**
      * 第一次尝试编写代码
-     * 每次选取第一位数字作为pivot, 从最右边的下标数开始比较
+     * 每次选取第一位数字作为 pivot, 从最右边的下标数开始比较
      *
      */
     public static void first(int[] data, int left, int right) {
