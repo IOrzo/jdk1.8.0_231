@@ -26,7 +26,7 @@
 package java.lang.reflect;
 
 /**
- * {@code AnnotatedTypeVariable} represents the potentially annotated use of a
+ * {@code AnnotatedTypeVariable} represents the potentially（潜在地） annotated use of a
  * type variable, whose declaration may have bounds which themselves represent
  * annotated uses of types.
  *

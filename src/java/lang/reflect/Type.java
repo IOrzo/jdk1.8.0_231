@@ -32,7 +32,7 @@ package java.lang.reflect;
  *
  * @since 1.5
  */
-public interface Type {
+public interface Type { // [【Java】java.lang.reflect.Type详解](https://blog.csdn.net/u013718730/article/details/106165426/)
     /**
      * Returns a string describing this type, including information
      * about any type parameters.

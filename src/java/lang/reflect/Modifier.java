@@ -30,7 +30,7 @@ import sun.reflect.LangReflectAccess;
 import sun.reflect.ReflectionFactory;
 
 /**
- * The Modifier class provides {@code static} methods and
+ * The Modifier（修饰符） class provides {@code static} methods and
  * constants to decode class and member access modifiers.  The sets of
  * modifiers are represented as integers with distinct bit positions
  * representing different modifiers.  The values for the constants

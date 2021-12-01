@@ -74,7 +74,7 @@ public interface TypeVariable<D extends GenericDeclaration> extends Type, Annota
      * Returns the {@code GenericDeclaration} object representing the
      * generic declaration declared this type variable.
      *
-     * @return the generic declaration declared for this type variable.
+     * @return the generic declaration declared for this type variable. 为此类型变量声明的泛型声明。（获得声明（定义）这个“范型变量”的类型及名称）
      *
      * @since 1.5
      */

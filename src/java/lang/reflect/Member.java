@@ -81,7 +81,7 @@ interface Member {
 
     /**
      * Returns {@code true} if this member was introduced by
-     * the compiler; returns {@code false} otherwise.
+     * the compiler; returns {@code false} otherwise. （如果该成员是由编译器引入的，则返回 true；否则返回 false。）
      *
      * @return true if and only if this member was introduced by
      * the compiler.
