@@ -282,7 +282,7 @@ final class DualPivotQuicksort {
         /*
          * Sort five evenly spaced elements around (and including) the
          * center element in the range. These elements will be used for
-         * pivot selection as described below. The choice for spacing
+         * pivot selection as described(描述) below. The choice for spacing
          * these elements was empirically determined to work well on
          * a wide variety of inputs.
          */
