@@ -41,8 +41,8 @@ public class PropertyDescriptor extends FeatureDescriptor {
     private final MethodRef writeMethodRef = new MethodRef();
     private Reference<? extends Class<?>> propertyEditorClassRef;
 
-    private boolean bound;
-    private boolean constrained;
+    private boolean bound; // 边界
+    private boolean constrained; // 约束
 
     // The base name of the method name which will be prefixed with the
     // read and write method. If name == "foo" then the baseName is "Foo"

@@ -101,8 +101,8 @@ public class FeatureDescriptor {
     }
 
     /**
-     * The "expert" flag is used to distinguish between those features that are
-     * intended for expert users from those that are intended for normal users.
+     * The "expert" flag is used to distinguish（区分） between those features that are
+     * intended for expert users from those that are intended for（用于） normal users.
      *
      * @return True if this feature is intended for use by experts only.
      */
