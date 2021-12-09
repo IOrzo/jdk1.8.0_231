@@ -44,7 +44,7 @@ import sun.reflect.misc.MethodUtil;
  * in which a single method is applied to a target and
  * a set of arguments - as in <code>"a.setFoo(b)"</code>.
  * Note that where this example uses names
- * to denote the target and its argument, a statement
+ * to denote（表示） the target and its argument, a statement
  * object does not require a name space and is constructed with
  * the values themselves.
  * The statement object associates the named method

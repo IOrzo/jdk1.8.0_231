@@ -262,7 +262,7 @@ import sun.reflect.misc.ReflectUtil;
  * </pre>
  * Then the method <code>doIt</code> is overloaded.  EventHandler will invoke
  * the method that is appropriate based on the source.  If the source is
- * null, then either method is appropriate and the one that is invoked is
+ * null, then either method is appropriate（合适的） and the one that is invoked is
  * undefined.  For that reason we recommend against targeting overloaded
  * methods.
  *
@@ -449,7 +449,7 @@ public class EventHandler implements InvocationHandler {
             Class[] argTypes = null;
             Object[] newArgs = null;
 
-            if (eventPropertyName == null) {     // Nullary method.
+            if (eventPropertyName == null) {     // Nullary（空缺） method.
                 newArgs = new Object[]{};
                 argTypes = new Class<?>[]{};
             }

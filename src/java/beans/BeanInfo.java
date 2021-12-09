@@ -35,7 +35,7 @@ import java.awt.Image;
  * <p>
  * When developing your bean, you can implement
  * the bean features required for your application task
- * omitting the rest of the {@code BeanInfo} features.
+ * omitting（省略） the rest of the {@code BeanInfo} features.
  * They will be obtained through the automatic analysis
  * by using the low-level reflection of the bean methods
  * and applying standard design patterns.
@@ -53,7 +53,7 @@ public interface BeanInfo {
 
     /**
      * Returns the bean descriptor
-     * that provides overall information about the bean,
+     * that provides overall（总体） information about the bean,
      * such as its display name or its customizer.
      *
      * @return  a {@link BeanDescriptor} object,
