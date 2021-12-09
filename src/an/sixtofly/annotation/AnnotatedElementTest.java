@@ -22,12 +22,13 @@ public class AnnotatedElementTest {
         // 获取作用在该类上的注解，包括父类中可继承的注解
         System.out.println("getAnnotations：" + print(SubAnnotationConfig.class.getAnnotations()));
 
-        //
+        // getAnnotationsByType：interface an.sixtofly.annotation.SuperAnnotation
         System.out.println("getAnnotationsByType：" + print(SubAnnotationConfig.class.getAnnotationsByType(SuperAnnotation.class)));
 
+        // null
         System.out.println("getDeclaredAnnotation：" + print(SubAnnotationConfig.class.getDeclaredAnnotation(SuperAnnotation.class)));
 
-        //
+        // null
         System.out.println("getDeclaredAnnotationsByType：" + print(SubAnnotationConfig.class.getDeclaredAnnotationsByType(SuperAnnotation.class)));
 
         // getDeclaredAnnotations：interface an.sixtofly.annotation.Indexed,
