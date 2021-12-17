@@ -41,13 +41,13 @@ import java.util.Hashtable;
  * <code>Name</code> parameter and one taking a <code>String</code>.
  * These overloaded versions are equivalent in that if
  * the <code>Name</code> and <code>String</code> parameters are just
- * different representations of the same name, then the overloaded
+ * different representations（陈述） of the same name, then the overloaded
  * versions of the same methods behave the same.
  * In the method descriptions below, only one version is fully documented.
  * The second version instead has a link to the first:  the same
  * documentation applies to both.
  * <p>
- * For systems that support federation, <tt>String</tt> name arguments to
+ * For systems that support federation（对于支持联邦的系统）, <tt>String</tt> name arguments to
  * <tt>Context</tt> methods are composite names. Name arguments that are
  * instances of <tt>CompositeName</tt> are treated as composite names,
  * while <tt>Name</tt> arguments that are not instances of
