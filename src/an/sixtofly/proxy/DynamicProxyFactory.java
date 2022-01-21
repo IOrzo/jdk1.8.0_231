@@ -1,5 +1,10 @@
 package an.sixtofly.proxy;
 
+import sun.misc.ProxyGenerator;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -35,6 +40,16 @@ public class DynamicProxyFactory implements InvocationHandler {
         buy.buy();
         PayService pay = (PayService) person;
         pay.pay();
+        createProxyClassFile(person);
     }
 
+    private static void createProxyClassFile(Object proxy) {
+        String name = proxy.getClass().getName();
+        byte[] bytes = ProxyGenerator.generateProxyClass(name, new Class[]{proxy.getClass()});
+        try (FileOutputStream out = new FileOutputStream(name + ".class")) {
+            out.write(bytes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
