@@ -499,9 +499,9 @@ public final class Method extends Executable {
     }
 
     /**
-     * Returns {@code true} if this method is a bridge       桥接方法是 JDK 1.5 引入泛型后，为了使Java的泛型方法生成的字节码和 1.5 版本前的字节码相兼容，由编译器自动生成的方法。
-     * method; returns {@code false} otherwise.              字节码中桥接方法会被标记为ACC_BRIDGE和ACC_SYNTHETIC，其中ACC_BRIDGE用于说明这个方法是由编译生成的桥接方法，
-     *                                                       ACC_SYNTHETIC说明这个方法是由编译器生成，并且不会在源代码中出现。
+     * Returns {@code true} if this method is a bridge       桥接方法是 JDK 1.5 引入泛型后，为了使 Java 的泛型方法生成的字节码和 1.5 版本前的字节码相兼容，由编译器自动生成的方法。
+     * method; returns {@code false} otherwise.              字节码中桥接方法会被标记为 ACC_BRIDGE 和 ACC_SYNTHETIC，其中 ACC_BRIDGE 用于说明这个方法是由编译生成的桥接方法，
+     *                                                       ACC_SYNTHETIC 说明这个方法是由编译器生成，并且不会在源代码中出现。
      * @return true if and only if this method is a bridge   [java中什么是bridge method（桥接方法）](https://blog.csdn.net/mhmyqn/article/details/47342577)
      * method as defined by the Java Language Specification.
      * @since 1.5

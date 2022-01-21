@@ -1021,7 +1021,7 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
                     break;                   // no lock when adding to empty bin
             }
             else if ((fh = f.hash) == MOVED)
-                tab = helpTransfer(tab, f);
+                tab = helpTransfer(tab, f); // 扩容
             else {
                 V oldVal = null;
                 synchronized (f) {
