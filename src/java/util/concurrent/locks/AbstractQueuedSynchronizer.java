@@ -570,7 +570,7 @@ public abstract class AbstractQueuedSynchronizer
 
     /**
      * The number of nanoseconds for which it is faster to spin
-     * rather than to use timed park. A rough estimate suffices
+     * rather than to use timed park. A rough（粗糙的） estimate（估计） suffices
      * to improve responsiveness with very short timeouts.
      */
     static final long spinForTimeoutThreshold = 1000L;
@@ -813,7 +813,7 @@ public abstract class AbstractQueuedSynchronizer
             /*
              * waitStatus must be 0 or PROPAGATE.  Indicate that we
              * need a signal, but don't park yet.  Caller will need to
-             * retry to make sure it cannot acquire before parking. 调用者需要在调用parking之前再次确认不能获取signal
+             * retry to make sure it cannot acquire before parking. 调用者需要在调用 parking 之前再次确认不能获取signal
              */
             compareAndSetWaitStatus(pred, ws, Node.SIGNAL);
         }
