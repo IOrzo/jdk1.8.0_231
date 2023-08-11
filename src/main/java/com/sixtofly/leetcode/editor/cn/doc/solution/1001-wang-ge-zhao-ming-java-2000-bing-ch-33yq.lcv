@@ -1,0 +1,156 @@
+### 解题思路
+
+并查集的思路
+因为n的范围不能给所有的点找集合
+找到每个灯在`行，列，左上，右上`的代表点`represents`。
++ 遍历每个灯，`代表点光亮+1`
++ 遍历每个查询，检查查询点的代表点上是否有灯照。
++ 删除灯，注意`是否有灯`，有灯将`代表点光亮-1`
+
+周而复始
+
+### 代码
+
+* java
+
+```java
+class Solution {
+	int n;
+
+	public int[] gridIllumination(int n, int[][] lamps, int[][] queries) {
+		this.n = n;
+		Map<Long, Integer> rowLight = new HashMap<Long, Integer>();
+		Map<Long, Integer> colLight = new HashMap<Long, Integer>();
+		Map<Long, Integer> leftLight = new HashMap<Long, Integer>();
+		Map<Long, Integer> rightLight = new HashMap<Long, Integer>();
+		Set<Long> light = new HashSet<Long>();
+		for (int[] lamp : lamps) {
+			int x = lamp[0], y = lamp[1];
+			long me = this.index(x, y);
+			if (light.contains(me)) {// 筛选重复的灯
+				continue;
+			}
+			light.add(me);
+			int[] represents = this.represents(x, y);
+			long index1 = this.index((long) represents[0], (long) represents[1]);
+			long index2 = this.index((long) represents[2], (long) represents[3]);
+			long index3 = this.index((long) represents[4], (long) represents[5]);
+			long index4 = this.index((long) represents[6], (long) represents[7]);
+			int row = rowLight.getOrDefault(index1, 0);
+			rowLight.put(index1, row + 1);
+			int col = colLight.getOrDefault(index2, 0);
+			colLight.put(index2, col + 1);
+			int left = leftLight.getOrDefault(index3, 0);
+			leftLight.put(index3, left + 1);
+			int right = rightLight.getOrDefault(index4, 0);
+			rightLight.put(index4, right + 1);
+		}
+		int len = queries.length;
+		int[] ans = new int[len];
+		int pans = 0;
+		for (int[] query : queries) {
+			int x = query[0], y = query[1];
+			int[] represents = this.represents(x, y);
+			long index1 = this.index((long) represents[0], (long) represents[1]);
+			long index2 = this.index((long) represents[2], (long) represents[3]);
+			long index3 = this.index((long) represents[4], (long) represents[5]);
+			long index4 = this.index((long) represents[6], (long) represents[7]);
+			int the = 0;
+			if (rowLight.containsKey(index1) || colLight.containsKey(index2) || leftLight.containsKey(index3)
+					|| rightLight.containsKey(index4)) {
+				the = 1;
+			}
+			ans[pans++] = the;
+			this.closeRound(x, y, rowLight, colLight, leftLight, rightLight, light);
+		}
+		return ans;
+	}
+
+	private void closeRound(int x, int y, Map<Long, Integer> rowLight, Map<Long, Integer> colLight,
+			Map<Long, Integer> leftLight, Map<Long, Integer> rightLight, Set<Long> light) {
+		this.close(x, y, rowLight, colLight, leftLight, rightLight, light);// 忘了关自己
+		this.close(x + 1, y, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x - 1, y, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x, y + 1, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x, y - 1, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x - 1, y - 1, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x + 1, y - 1, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x - 1, y + 1, rowLight, colLight, leftLight, rightLight, light);
+		this.close(x + 1, y + 1, rowLight, colLight, leftLight, rightLight, light);
+	}
+
+	private void close(int x, int y, Map<Long, Integer> rowLight, Map<Long, Integer> colLight,
+			Map<Long, Integer> leftLight, Map<Long, Integer> rightLight, Set<Long> light) {
+		if (x < 0 || x == n || y < 0 || y == n) {// 越界就不做了
+			return;
+		}
+		long me = this.index(x, y);
+		if (!light.contains(me)) {// 有灯才要关
+			return;
+		}
+		light.remove(me);
+		int[] represents = this.represents(x, y);
+		long index1 = this.index((long) represents[0], (long) represents[1]);
+		long index2 = this.index((long) represents[2], (long) represents[3]);
+		long index3 = this.index((long) represents[4], (long) represents[5]);
+		long index4 = this.index((long) represents[6], (long) represents[7]);
+		this.updateMap(index1, rowLight);
+		this.updateMap(index2, colLight);
+		this.updateMap(index3, leftLight);
+		this.updateMap(index4, rightLight);
+	}
+
+	private void updateMap(long index, Map<Long, Integer> map) {
+		int val = map.getOrDefault(index, 0);
+		if (val > 1) {
+			map.put(index, val - 1);
+		} else if (val == 1) {
+			map.remove(index);
+		}
+	}
+
+	private long index(long x, long y) {
+		return x * this.n + y;
+	}
+
+	private int[] represents(int x, int y) {
+		int[] ans = new int[8];
+		ans[0] = x;// 行代表(x,0)
+		ans[1] = 0;
+		ans[2] = 0;// 列代表(0,y)
+		ans[3] = y;
+		int leftx = 0;
+		int lefty = 0;
+		if (x == y) {
+			leftx = 0;
+			lefty = 0;
+		} else if (x > y) {
+			leftx = x - y;
+			lefty = 0;
+		} else {
+			leftx = 0;
+			lefty = y - x;
+		}
+		ans[4] = leftx;
+		ans[5] = lefty;
+		int rightx = 0;
+		int righty = 0;
+		int sub = this.n - 1 - y;
+		if (x == sub) {
+			rightx = 0;
+			righty = this.n - 1;
+		} else if (x > sub) {
+			rightx = x - sub;
+			righty = this.n - 1;
+		} else {
+			rightx = 0;
+			righty = y + x;
+		}
+		ans[6] = rightx;
+		ans[7] = righty;
+		return ans;
+	}
+
+}
+```
+
